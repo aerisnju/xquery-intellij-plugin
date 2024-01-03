@@ -32,7 +32,7 @@ buildscript {
         return build.readLines()[0].split('\\.')[0]
     }
 
-    ext.idea_version = System.getenv("IDEA_VERSION") ?: '2023.2'
+    ext.idea_version = System.getenv("IDEA_VERSION") ?: '2023.3'
     ext.idea_since_build = ext.since_from_version(ext.idea_version).toInteger()
     ext.idea_type = System.getenv("IDEA_TYPE") ?: 'IC'
 
@@ -53,12 +53,12 @@ buildscript {
     ext.junit_platform_version = "1.9.1"
     ext.jacoco_version = '0.8.8'
 
-    ext.plugin_version = '1.9.4'
+    ext.plugin_version = '1.10.0'
     // Suffix ordering:
     //    `'-snapshot'` -- for development builds
     //    `'-eap-###'`  -- for early access preview builds (`-eap-1`, `-eap-2`, `-eap-3`, etc.)
     //    `''`          -- for release builds
-    ext.suffix = ''
+    ext.suffix = '-snapshot'
 
     repositories {
         mavenCentral()

@@ -119,4 +119,6 @@ class MockPsiManager(private val project: Project) : PsiManagerEx() {
     }
 
     // endregion
+    
+    override fun findCachedViewProvider(file: VirtualFile): FileViewProvider? = null
 }

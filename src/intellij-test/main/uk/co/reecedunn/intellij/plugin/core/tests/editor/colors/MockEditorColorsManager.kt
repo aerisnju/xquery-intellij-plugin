@@ -19,7 +19,7 @@ import com.intellij.compat.openapi.editor.colors.EditorColorsManager
 import com.intellij.openapi.editor.colors.EditorColorsScheme
 
 class MockEditorColorsManager : EditorColorsManager() {
-    override fun addColorsScheme(scheme: EditorColorsScheme): Unit = TODO()
+//    override fun addColorsScheme(scheme: EditorColorsScheme): Unit = TODO()
 
     override fun getAllSchemes(): Array<EditorColorsScheme> = TODO()
 
@@ -36,4 +36,10 @@ class MockEditorColorsManager : EditorColorsManager() {
     override fun setUseOnlyMonospacedFonts(b: Boolean): Unit = TODO()
 
     override fun isDarkEditor(): Boolean = false
+    
+    override fun addColorScheme(scheme: EditorColorsScheme): Unit = TODO()
+    
+    override fun setCurrentSchemeOnLafChange(scheme: EditorColorsScheme): Unit = TODO()
+    
+    override fun getSchemeModificationCounter(): Long = TODO()
 }
